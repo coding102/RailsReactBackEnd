@@ -88,8 +88,4 @@ test:
 #
 production:
   <<: *default
-  database: app_backend_production
-  username: test
-  password: test2
-  host: localhost
-  port: 5432
+  url: <%= ENV['DATABASE_URL'] %>
